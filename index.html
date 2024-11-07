@@ -18,6 +18,66 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Container for the progress bar */
+      .progress-container {
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 20px 0;
+        height: 20px;
+      }
+
+      /* The actual progress bar */
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        background-color: #4caf50;
+        text-align: center;
+        line-height: 20px;
+        color: white;
+        font-weight: bold;
+      }
+      /* front end */
+      .react-bar {
+        width: 80%;
+      }
+      .html-bar {
+        width: 90%;
+      }
+      .css-bar {
+        width: 80%;
+      }
+      .next-bar {
+        width: 70%;
+      }
+
+      /* backend */
+      .node-bar {
+        width: 75%;
+      }
+      .express-bar {
+        width: 75%;
+      }
+      .sql-bar {
+        width: 70%;
+      }
+      .nosql-bar {
+        width: 70%;
+      }
+      .skill-progress {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        align-items: center;
+        height: 35px;
+      }
+      .skill-text {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
@@ -35,10 +95,10 @@
     </header>
 
     <!-- Hero section -->
-    <section class="home reveal" id="home">
+    <section class="home" id="home">
       <div class="home-text">
         <p>
-          Let me bring your ideas to life and transform <br />
+          Let me bring your ideas <br> to life and transform 
           them into successful business solutions.
         </p>
         <div class="btn-container">
@@ -56,7 +116,7 @@
     </section>
 
     <!-- About section -->
-    <section class="about reveal" id="about">
+    <section class="about" id="about">
       <div class="about-img">
         <img src="img/about.jpg" />
       </div>
@@ -79,7 +139,7 @@
     </section>
 
     <!-- Skills section -->
-    <section class="services reveal" id="services">
+    <section class="services" id="services">
       <div class="main-text">
         <h2><span>My</span> Skills</h2>
       </div>
@@ -91,10 +151,30 @@
           </div>
           <h3>Front End</h3>
           <ul>
-            <li>React</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>NEXT</li>
+            <li class="skill-progress">
+              <div class="skill-text">React</div>
+              <div class="progress-container">
+                <div class="progress-bar react-bar">80%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <span class="skill-text">HTML</span>
+              <div class="progress-container">
+                <div class="progress-bar html-bar">90%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <span class="skill-text">CSS</span>
+              <div class="progress-container">
+                <div class="progress-bar css-bar">80%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <span class="skill-text">NEXTJS</span>
+              <div class="progress-container">
+                <div class="progress-bar next-bar">70%</div>
+              </div>
+            </li>
           </ul>
           <!-- <p>
             One way to categorize the activities is in terms of the
@@ -107,39 +187,66 @@
           <div class="s-icons">
             <i class="bx bx-code-alt"></i>
           </div>
-
-          <h3>BackEnd</h3>
-          <!-- <p>
-            One way to categorize the activities is in terms of the
-            professional'a area of expertise such as competitive analysis,
-            corporate strategy.
-          </p> -->
+          <h3>Backe End</h3>
           <ul>
-            <li>Nodejs</li>
-            <li>Express</li>
-            <li>SQL (PostgreSQL)</li>
-            <li>NOSQL (MongoDB)</li>
-            <li></li>
+            <li class="skill-progress">
+              <div class="skill-text">Nodejs</div>
+              <div class="progress-container">
+                <div class="progress-bar node-bar">75%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <span class="skill-text">Express</span>
+              <div class="progress-container">
+                <div class="progress-bar express-bar">75%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <span class="skill-text">SQL</span>
+              <div class="progress-container">
+                <div class="progress-bar sql-bar">70%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <span class="skill-text">NOSQL</span>
+              <div class="progress-container">
+                <div class="progress-bar nosql-bar">70%</div>
+              </div>
+            </li>
           </ul>
-          <!-- <a href="#" class="read">Read More</a> -->
+    
         </div>
         <div class="box">
           <div class="s-icons">
             <i class="bx bx-test-tube"></i>
           </div>
-
           <h3>Testing</h3>
-          <!-- <p>
-            One way to categorize the activities is in terms of the
-            professional'a area of expertise such as competitive analysis,
-            corporate strategy.
-          </p> -->
           <ul>
-            <li>Jest</li>
-            <li>cypress</li>
-            <li>Light house</li>
+            <li class="skill-progress">
+              <div class="skill-text">cypress</div>
+              <div class="progress-container">
+                <div class="progress-bar node-bar">75%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <div class="skill-text">Jest</div>
+              <div class="progress-container">
+                <div class="progress-bar node-bar">75%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <div class="skill-text">Lighthouse</div>
+              <div class="progress-container">
+                <div class="progress-bar node-bar">75%</div>
+              </div>
+            </li>
+            <li class="skill-progress">
+              <div class="skill-text">Mocha</div>
+              <div class="progress-container">
+                <div class="progress-bar node-bar">75%</div>
+              </div>
+            </li>
           </ul>
-          <a href="#" class="read">Read More</a>
         </div>
       </div>
     </section>
@@ -154,9 +261,7 @@
           <img src="img/bg-img.jpg" />
           <div class="layer">
             <h5>Coming Soon!</h5>
-            <p>
-             An exciting new project is just around the corner!
-            </p>
+            <p>An exciting new project is just around the corner!</p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
@@ -164,9 +269,7 @@
           <img src="img/bg-img.jpg" />
           <div class="layer">
             <h5>Coming Soon!</h5>
-            <p>
-             An exciting new project is just around the corner!
-            </p>
+            <p>An exciting new project is just around the corner!</p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
@@ -174,9 +277,7 @@
           <img src="img/bg-img.jpg" />
           <div class="layer">
             <h5>Coming Soon!</h5>
-            <p>
-             An exciting new project is just around the corner!
-            </p>
+            <p>An exciting new project is just around the corner!</p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
@@ -184,9 +285,7 @@
           <img src="img/bg-img.jpg" />
           <div class="layer">
             <h5>Coming Soon!</h5>
-            <p>
-             An exciting new project is just around the corner!
-            </p>
+            <p>An exciting new project is just around the corner!</p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
@@ -194,9 +293,7 @@
           <img src="img/bg-img.jpg" />
           <div class="layer">
             <h5>Coming Soon!</h5>
-            <p>
-              An exciting new project is just around the corner!
-            </p>
+            <p>An exciting new project is just around the corner!</p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
@@ -204,9 +301,7 @@
           <img src="img/bg-img.jpg" />
           <div class="layer">
             <h5>Visual Design</h5>
-            <p>
-             An exciting new project is just around the corner!
-            </p>
+            <p>An exciting new project is just around the corner!</p>
             <a href="#"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
@@ -214,18 +309,38 @@
     </section>
 
     <!-- contact section -->
-    <section class="contact reveal" id="contact">
-      <div class="contact-text">
-        <h2>Contact <span>Me!</span></h2>
-        <h4>If You Have Any Project In Your Mind.</h4>
-        <p>
-          As a full-stack developer, I specialize in creating dynamic web
-          applications that integrate front-end design with back-end
-          functionality.
-        </p>
-        <div class="list">
-          <li><a href="#">0659972023</a></li>
-          <li><a href="#">thamig125@gmail.com</a></li>
+    <section class="contact-section"  id="contact">
+      <h2>Contact <span>Me!</span></h2>
+      <div class="contact">
+
+        <div class="contact-text">
+          
+          <h4>If You Have Any Project In Your Mind.</h4>
+          <p>
+            As a full-stack developer, I specialize in creating dynamic web
+            applications that integrate front-end design with back-end
+            functionality.
+          </p>
+          <div class="list">
+            <li> mobile: 0659972023</li>
+            <li>email: thamig125@gmail.com</li>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="">
+            <input type="name" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email Address" required />
+            <input type="name" placeholder="Your Mobile Number" required />
+            <textarea
+              name=""
+              id=""
+              cols="35"
+              rows="10"
+              placeholder="How Can I Help You"
+              required
+            ></textarea>
+            <input type="submit" value="Send Message" class="submit" required />
+          </form>
         </div>
         <div class="contact-icons">
           <a href="#"><i class="bx bxl-facebook"></i></a>
@@ -235,22 +350,7 @@
         </div>
       </div>
 
-      <div class="contact-form">
-        <form action="">
-          <input type="name" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email Address" required />
-          <input type="name" placeholder="Your Mobile Number" required />
-          <textarea
-            name=""
-            id=""
-            cols="35"
-            rows="10"
-            placeholder="How Can I Help You"
-            required
-          ></textarea>
-          <input type="submit" value="Send Message" class="submit" required />
-        </form>
-      </div>
+      
     </section>
     <!-- footer -->
     <section class="end">
@@ -264,17 +364,5 @@
 
     <!-- custom js link  -->
     <script type="text/javascript" src="js/script.js"></script>
-    <!-- Load library from the CDN -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- Setup and start animation! -->
-    <!-- <script>
-      var typed = new Typed(".animate", {
-        strings: ["Full StackDeveloper.", "Coding Addict."],
-        typeSpeed: 100,
-        backspeed: 80,
-        backDelay: 1500,
-      });
-    </script> -->
   </body>
 </html>

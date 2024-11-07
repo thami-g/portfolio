@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        /* Container for the progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+            height: 30px;
+        }
+
+        /* The actual progress bar */
+        .progress-bar {
+            height: 100%;
+            width: 70%; /* Set percentage here */
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px; /* Matches height of progress bar */
+            color: white;
+            font-weight: bold;
+            transition: width 0.4s ease; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-container">
+    <div class="progress-bar">70%</div>
+</div>
+
+</body>
+</html>
