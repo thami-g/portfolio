@@ -498,15 +498,11 @@ form textarea {
     height: 87vh;
   }
 }
-@media (min-width: 923px) {
-  .img-container {
-    display: none;
-  }
+@media (max-width: 923px) {
   .home-text {
     margin: 0 auto;
   }
   .contact-icons {
-    /* text-align: center; */
     margin-top: -100px;
   }
 }
