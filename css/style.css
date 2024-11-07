@@ -484,7 +484,8 @@ form textarea {
   }
 }
 
-@media (max-width: 1100px) {
+
+@media (min-width: 1100px) {
   :root {
     --big-font: 5rem;
     --h2-font: 2.5rem;
@@ -496,6 +497,9 @@ form textarea {
   }
   .home {
     height: 87vh;
+  }
+  .contact-icons {
+    margin-top: -100px;
   }
 }
 @media (max-width: 923px) {
@@ -530,6 +534,7 @@ form textarea {
     text-align: center;
     margin: 0 auto;
   }
+  
 }
 
 @media (max-width: 344px) {
@@ -565,6 +570,18 @@ form textarea {
     margin: 0 auto;
   }
 }
+@media (min-width: 300px) and (max-width: 320px) {
+ .btn {
+      padding: 5px 5px;
+    }
+    .contact-form form{
+      display: grid;
+    }
+    .contact-form form input{
+      padding: 9px;
+      justify-self: end;
+    }
+  }
 
 @media (max-width: 840px) {
   #menu-icon {
@@ -601,7 +618,7 @@ form textarea {
   }
 }
 
-@media (max-width: 893px) {
+@media (max-width: 920px) {
   .about-img {
     display: none;
   }
