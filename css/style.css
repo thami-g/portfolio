@@ -335,15 +335,13 @@ header.sticky {
 }
 .contact-section {
   background: var(--second-bg-color);
-  padding-top:160px;
-  
+  padding-top: 90px;
 }
 
-.contact-section h2{
+.contact-section h2 {
   text-align: center;
   font-size: var(--h2-font);
-  margin-bottom: 100px;
-  
+  margin-bottom: 80px;
 }
 
 .contact-text h4 {
@@ -373,27 +371,24 @@ header.sticky {
   margin-bottom: 12px;
   color: var(--second-color);
   font-size: 20px;
-
 }
 
-.contact-text p{
+.contact-text p {
   font-size: 20px;
 }
 
-.contact-text h4{
+.contact-text h4 {
   border: 1px solid green;
   font-size: var(--h2-font);
   text-align: center;
 }
 
-
 .list li a:hover {
   color: vat(--text-color);
   transform: translate(5px);
 }
-.contact-icons{
+.contact-icons {
   border: 1px solid blue;
-
 }
 
 .contact-icons i {
@@ -510,11 +505,10 @@ form textarea {
   .home-text {
     margin: 0 auto;
   }
-  .contact-icons{
+  .contact-icons {
     /* text-align: center; */
     margin-top: -100px;
   }
-  
 }
 
 @media (max-width: 920px) {
@@ -536,12 +530,11 @@ form textarea {
   .contact {
     grid-template-columns: 1fr;
   }
-  .contact-icons{
+  .contact-icons {
     text-align: center;
     margin: 0 auto;
   }
 }
-
 
 @media (max-width: 344px) {
   .btn {
@@ -560,28 +553,22 @@ form textarea {
   .btn {
     display: inline-block;
     padding: 10px 15px;
-    
   }
 }
 @media (max-width: 400px) {
   .btn {
     display: inline-block;
     padding: 10px 15px;
-    
   }
-  .contact-text{
-      text-align: center;
+  .contact-text {
+    text-align: center;
   }
-  .contact{
-    padding-top: 50px;
-  }
-  .contact-icons{
+
+  .contact-icons {
     text-align: center;
     margin: 0 auto;
   }
 }
-
-
 
 @media (max-width: 840px) {
   #menu-icon {
@@ -623,16 +610,15 @@ form textarea {
     display: none;
   }
   .about-text {
-   text-align: center;
+    text-align: center;
   }
 
-  .about{
+  .about {
     padding-top: 4.5rem;
     padding-left: 30px;
     padding-right: 30px;
-    
   }
-  .contact-icons{
+  .contact-icons {
     text-align: center;
     margin: 0 auto;
   }
