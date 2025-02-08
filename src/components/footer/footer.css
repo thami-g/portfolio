@@ -1,0 +1,11 @@
+.footer{
+    letter-spacing: 1px;
+    font-size: 12px;
+    height: 90px;
+    background-color:  #202020;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

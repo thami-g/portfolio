@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 35px;
+}
+
+.navbar.scrolled {
+  transition: 0.5s;
+  background-color: rgb(51, 49, 49);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  all:unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.logo .logo-text {
+  font-size: 1.575rem;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.logo:hover {
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+.nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 10px;
+  margin: 0 25px;
+  position: relative;
+}
+
+.nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #38bdf8;
+  transition: all 0.5s;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-btn .icon {
+  color: white;
+  font-size: 25px;
+}

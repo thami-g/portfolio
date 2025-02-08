@@ -1,0 +1,15 @@
+.projects .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 30px;
+
+}
+
+.container{
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 1000px;
+   
+}
