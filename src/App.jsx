@@ -5,19 +5,24 @@ import AboutSection from "./components/about/AboutSection";
 import ContactSection from "./components/Contact/ContactSection";
 import ProjectsSection from "./components/projects/ProjectSection";
 import SkillsSection from "./components/skills/SkillsSection";
-import "./App.css";
+import AOS from "aos";
 
+AOS.init({
+  delay: 100
+});
 function App() {
   return (
-    <main className="main">
-      <Navbar />
+    <main >
+        <Navbar />
+      <div className="app-container">
       <Hero />
-      <AboutSection />
-      <SkillsSection />
+     <AboutSection />
+       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
-  
       <Footer />
+      </div>
+      
     </main>
   );
 }

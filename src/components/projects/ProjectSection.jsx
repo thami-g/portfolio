@@ -1,19 +1,18 @@
 import Title from "../title/Title";
-import ProjectCard from "../project/ProjectCard";
+
 import "./projects-section.css";
+import { projects as data } from "../../data";
+import Project from "../project/Project";
 
 function ProjectSection() {
+  const projects = data.map((project) => {
+    return <Project key={project.id} projectInfo={project} />;
+  });
+
   return (
     <section className="projects" id="projects">
       <Title title="Projects" />
-      <div className="container">
-        <ProjectCard title="e-commerce" stack="MERN" />
-        <ProjectCard title="e-commerce" stack="MERN" />
-        <ProjectCard title="e-commerce" stack="MERN" />
-        <ProjectCard title="e-commerce" stack="MERN" />
-        <ProjectCard title="e-commerce" stack="MERN" />
-        <ProjectCard title="e-commerce" stack="MERN" />
-      </div>
+      <div className="container">{projects}</div>
     </section>
   );
 }

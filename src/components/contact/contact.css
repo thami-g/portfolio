@@ -1,103 +1,159 @@
-.contact {
-  background-color: #2a2a2a;
-  padding-bottom: 50px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #ada7a7 !important;
+  /* color: #ada7a7 !important; */
 }
 
-.form-container {
-  width: 600px;
-  height: max-content;
-  margin: 0 auto;
-  margin-top: 60px;
-  text-align: center;
-  padding-top: 20px;
-  border-radius: 7px;
-  box-shadow: rgba(125, 125, 126, 0.2) 0px 8px 24px;
+.form{
+  /* border: 2px solid red; */
+  padding: 0  2.5rem;
+  margin-bottom: 2.5rem;
 }
+.contact-bg-screen {
+  display: none;
+}
+
+
+.form-container {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  border-radius: 7px;
+  box-shadow: rgba(125, 125, 126, 0.2) 0px 8px 30px;
+}
+
 .message-container {
+  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 15px;
-  /* border: 1px solid blue; */
-  padding-left: 25px;
-  margin-bottom: 25px;
+  justify-content: center;
+  gap: 0 15px;
+  /* padding-left: 2rem; */
+  margin: 1rem 0;
+  max-width: 400px;
+  /* border: 1px solid red; */
+  margin-left: 2.5rem;
 }
 
 .message-container img {
-  width: 95px;
-  height: 95px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #d5d5e3;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
 }
 
 .message {
-    color: #fff;
-  width: 350px;
-  font-family: "Lato";
-  font-weight: 500;
+  color: rgb(223, 219, 219);
+  font-weight: 100;
   text-align: left;
+  font-size: 0.8rem;
+  /* border: 1px solid red; */
+  line-height: 1.2;
+  letter-spacing: 1px;
 }
 
 .form-controls {
-    height: 480px;
-  /* border: 2px solid red; */
-  padding: 10px 50px;
+  padding: 1.5rem;
+  height: 420px;
 }
+
 .form-control {
   display: flex;
   flex-direction: column;
-  margin-bottom: 19px;
+  margin-bottom: 0.7rem;
   cursor: default;
+  min-height: 77px;
+  /* border: 1px solid red; */
 }
-.form-control input {
-  all: unset;
-  border-bottom: 1px solid #d5d5e3;
+.form-control .input {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  border-bottom: 1px solid #ada7a7;
+  text-align: center;
+  color: #ada7a7;
+}
+.form-control .invalid-text {
+  border-bottom: 1px solid rgb(252, 122, 122);
 }
 
 .form-control input:focus {
   border-bottom: 1px solid #38bdf8;
 }
 
-.form-control textarea {
-  all: unset;
-  height: 200px;
-  border: 1px solid #d5d5e3;
+.form-control .text-area {
+  background: transparent;
+  color: #ada7a7;
+  outline: none;
+  height:9rem;
+  border: 1px solid #ada7a7;
   text-align: left;
-  padding: 5px;
+  padding: 0.5rem;
   border-radius: 4px;
+  margin-top: 1rem;
+  /* border: 1px solid red; */
 }
 
-.form-control textarea:focus {
+.form-control .text-area:focus{
   border: 1px solid #38bdf8;
+}
+
+.form-control .invalid-input {
+  border: 1px solid rgb(252, 122, 122);
 }
 
 .form-control label {
   margin-bottom: 5px;
+  color: #ada7a7;
 }
 
 .form .submit-btn {
-  all: unset;
-  color: #d5d5e3;
-  border: 1px solid #d5d5e3;
-  padding: 7px 20px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border: none;
+  padding:0.8rem 1.6rem;
   border-radius: 4px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.5s;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  background: #38bdf8;
+}
+.submit-btn:active {
+  transform: scale(0.95);
 }
 
-.form .submit-btn:hover {
-    border: 1px solid #38bdf8;
-  background-color: #38bdf8;
-  color: #fff;
+.contact-icons {
+  display: flex;
+  /* border: 1px solid red; */
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+.contact-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s color;
+}
+.contact-icon:hover {
+  color: #38bdf8;
 }
 
-.form .submit-btn:active {
-  border: none;
-  background-color: #38bdf8;
-  color: #fff;
-  transform: scale(1);
+.invalid {
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: rgb(252, 122, 122);
+  letter-spacing: 1px;
+  margin-top: 0.4rem;
 }
-

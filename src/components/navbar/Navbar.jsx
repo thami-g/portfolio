@@ -1,10 +1,27 @@
 import { useEffect, useState } from "react";
-import "./navbar.css";
-import { FaCode, FaMoon } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
 import { MdOutlineWbSunny } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaGithub } from "react-icons/fa";
+import { navLinksTexts } from "../../data";
+import NavLinks from "./NavLinks";
+import Logo from "./Logo";
+import Drawer from "./Drawer";
+import "./navbar.css";
+
 function Navbar() {
   const [theme, setTheme] = useState("dark");
   const [scrolled, setScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [activeLinkId, setActiveLinkId] = useState("");
+  const { id: homeId } = navLinksTexts[0];
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -14,44 +31,40 @@ function Navbar() {
     }
   };
 
-  // Set up event listener when the component mounts
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const themeIcon =
+    theme === "dark" ? (
+      <MdOutlineWbSunny className="icon" />
+    ) : (
+      <FaMoon className="icon" />
+    );
 
   return (
-    <nav className={`navbar ${scrolled ?'scrolled':''}`}>
-      <a href="#home" className="logo">
-        <p className="logo-text">fullstack</p>
-        <FaCode size={30} className="logo-icon" />
-      </a>
-      <div className="nav">
-        <a href="#home" className="nav-link">
-          Home
+    <>
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        <button
+          className="menu-btn sm-nav-icon mobile-icon-nav"
+          onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+        >
+          <RxHamburgerMenu className="mobile-icon-nav" />
+        </button>
+        <Logo setActiveLinkId={setActiveLinkId} homeId={homeId} />
+        <a href="#">
+          <FaGithub className="sm-nav-icon mobile-icon-nav" />
         </a>
-        <a href="#about" className="nav-link">
-          About
-        </a>
-        <a href="#skills" className="nav-link">
-          Skills
-        </a>
-        <a href="#projects" className="nav-link">
-          Projects
-        </a>
-      
-        <a href="#contact" className="nav-link">
-          Contact
-        </a>
-      </div>
-      <button className="theme-btn" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        {theme === "dark" ? <MdOutlineWbSunny className="icon" /> : <FaMoon className="icon" />}
-      </button>
-    </nav>
+        <NavLinks
+          setActiveLinkId={setActiveLinkId}
+          activeLinkId={activeLinkId}
+          navLinksTexts={navLinksTexts}
+        />
+        <button
+          className="theme-btn"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {themeIcon}
+        </button>
+      </nav>
+      <Drawer isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+    </>
   );
 }
 

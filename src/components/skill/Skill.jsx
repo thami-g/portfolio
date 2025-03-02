@@ -1,12 +1,12 @@
-import React from 'react'
-
-function Skill({Icon, level}) {
+function Skill({ icon, framework, level, name }) {
   return (
-    <div className='skill'>
-      <Icon cl />
-      <span>{level}</span>
-    </div>
-  )
+    <article className="skill" title={name}>
+      <i className="icon">
+        {icon} {framework}
+      </i>
+      <p>{level}</p>
+    </article>
+  );
 }
 
-export default Skill
+export default Skill;

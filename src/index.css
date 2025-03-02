@@ -1,22 +1,14 @@
 html {
-  scroll-padding-top: 70px;
+  scroll-padding-top: 87px;
 }
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background-color: #2a2a2a;
-  --background-color-second: #202020;
-  --text-color: #fff;
-  --second-color: #d5d5e3;
-  --main-color: #38bdf8;
-  --big-font: 5rem;
-  --h2-font: 3rem;
-  --p-font: 1.1rem;
 }
 * {
   padding: 0;
@@ -37,11 +29,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:#38bdf8;
+  background-color:#928787;
   border-radius: 4px;
 }
 
 body {
-  background-color: var(--background-color-second);
-  color: var(--text-color);
+  background-color:  #202020;
+  color: #ffffffe1;
+  
 }

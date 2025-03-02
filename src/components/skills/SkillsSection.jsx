@@ -1,116 +1,20 @@
 import Title from "../title/Title";
-import { backend, frontend, mobile,testing } from "../../data";
+import { allSkills } from "../../data";
 import "./skills.css";
-import { useState } from "react";
+import Skills from "./Skills";
 
 function SkillsSection() {
-  const [hoveredId, setHoveredId] = useState(null);
+  const skillsList = Object.entries(allSkills);
+
+  const skills = skillsList.map((skill) => {
+    const [name, category] = skill;
+    return <Skills key={name} title={name} skills={category} />;
+  });
 
   return (
-    <section className="skills-section" id="skills">
+    <section className="skills-section skills-mb" id="skills">
       <Title title="skills" />
-      <div
-        className="skills"
-        onMouseOver={(e) => {
-          const id = e.target.getAttribute("data-id");
-          if (id !== null) {
-            setHoveredId(id);
-          }
-        }}
-        onMouseOut={(e) => {
-          if (!e.currentTarget.contains(e.relatedTarget)) {
-            setHoveredId(null);
-          }
-        }}
-      >
-        <div className="backend-container">
-          <h2 className="skills_title">backend</h2>
-          <div className="backend">
-            {backend.map((item) => {
-              const { icon, name, framework, level, id } = item;
-              return (
-                <article
-                  className={`skill ${hoveredId === id ? "active" : ''} `}
-                  title={name}
-                  key={id}
-                  data-id={id}
-                >
-                  <i className="icon">
-                    {icon} {framework}
-                  </i>
-                  <p>{level}</p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="frontend-container">
-          <h2 className="skills_title">frontend</h2>
-          <div className="frontend">
-            {frontend.map((item) => {
-              const { icon, name, framework, level, id } = item;
-              return (
-                <article
-                  className={`skill ${hoveredId === id ? "active": ''} `}
-                  title={name}
-                  key={id}
-                  data-id={id}
-                >
-                  <i className="icon">
-                    {icon} {framework}
-                  </i>
-                  <p>{level}</p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-        <div className="testing-container">
-          <h2 className="skills_title">testing</h2>
-          <div className="testing">
-            {testing.map((item) => {
-              const { icon, name, framework, level, id } = item;
-              return (
-                <article
-                  className={`skill ${hoveredId === id && "active"} `}
-                  title={name}
-                  key={id}
-                  data-id={id}
-                >
-                  <i className="icon">
-                    {icon} {framework}
-                  </i>
-                  <p>{level}</p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-        <div className="mobile-container">
-          <h2 className="skills_title">mobile</h2>
-          <div className="mobile">
-            {mobile.map((item) => {
-              const { icon, name, framework, level, id } = item;
-              return (
-                <article
-                  className={`skill ${hoveredId === id && "active"} `}
-                  title={name}
-                  key={id}
-                  data-id={id}
-                >
-                  <i className="icon">
-                    {icon} {framework}
-                  </i>
-                  <p>{level}</p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-
-     
-      </div>
+      <div className="skills">{skills}</div>
     </section>
   );
 }

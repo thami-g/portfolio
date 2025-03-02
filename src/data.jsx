@@ -5,12 +5,12 @@ import { SiTypescript } from "react-icons/si";
 import { FaFlutter } from "react-icons/fa6";
 import { SiJetpackcompose } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaBootstrap } from "react-icons/fa";
+// import { FaBootstrap } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiCypress } from "react-icons/si";
-import { SiVite } from "react-icons/si";
+// import { SiVite } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -22,19 +22,30 @@ import { SiApachejmeter } from "react-icons/si";
 import { SiJunit5 } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
-import { SiReactquery } from "react-icons/si";
-import { SiShadcnui } from "react-icons/si";
-import { SiMui } from "react-icons/si";
-import { SiReactrouter } from "react-icons/si";
+// import { SiReactquery } from "react-icons/si";
+// import { SiShadcnui } from "react-icons/si";
+// import { SiMui } from "react-icons/si";
+// import { SiReactrouter } from "react-icons/si";
 import { FaLaravel } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
-import { FaWordpress } from "react-icons/fa";
+// import { FaWordpress } from "react-icons/fa";
 import { SiSelenium } from "react-icons/si";
 import { SiCucumber } from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
+// import { FaFigma } from "react-icons/fa";
 import { SiRedis } from "react-icons/si";
 
+import { IoIosContact } from "react-icons/io";
+import { FaHome } from "react-icons/fa";
+import { IoRocket } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { FaTools } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+
+import { SiGithub } from "react-icons/si";
+import { RiNodejsLine } from "react-icons/ri";
+import { SiTestinglibrary } from "react-icons/si";
 import { v4 as uuidv4 } from "uuid";
+import { SiJest } from "react-icons/si";
 
 // levels :Beginner, Basic, Learning,pre-intermediate, Intermediate, Proficient, Master
 
@@ -45,6 +56,12 @@ export const mobile = [
     name: "React Native",
     icon: <FaReact />,
     level: "intermediate",
+  },
+  {
+    id: uuidv4(),
+    name: "Firebase",
+    icon: <IoLogoFirebase />,
+    level: "Beginner",
   },
   {
     id: uuidv4(),
@@ -112,7 +129,7 @@ export const backend = [
   {
     id: uuidv4(),
     name: "C# + ASP.NET",
-    icon: null,
+    icon: "C#",
     framework: "",
     level: "Basics",
   },
@@ -148,21 +165,102 @@ export const testing = [
   { id: uuidv4(), name: "Cucumber", icon: <SiCucumber />, level: "Beginner" },
   // { id: uuidv4(), name: "Cucumber", icon: <SiVite />, level: "Beginner" },
 ];
-
+export const allSkills = { frontend, backend, testing, mobile };
 export const projects = [
-  { id: uuidv4(), title: "e-commerce app", stack: "MERN STACK", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "MEAN STACK", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "NEXTJS", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "APS.NET", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "Angular", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "React Native", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "Flutter", icon: "" },
   {
     id: uuidv4(),
-    title: "e-commerce app",
-    stack: "Jet Pack Compase",
-    icon: "",
+    name: "e-commerce app",
+    stack: {
+      github: <SiGithub />,
+      rtl: <SiTestinglibrary />,
+      jest: <SiJest />,
+      mern: <RiNodejsLine />,
+    },
   },
-  { id: uuidv4(), title: "e-commerce app", stack: "LARAVAEL", icon: "" },
-  { id: uuidv4(), title: "e-commerce app", stack: "SPRING BOOT", icon: "" },
+  {
+    id: uuidv4(),
+    name: "e-commerce app",
+    stack: {
+      "source code": <SiGithub />,
+      rtl: <SiTestinglibrary />,
+      jest: <SiJest />,
+      "mern stack": <RiNodejsLine />,
+    },
+  },
+  {
+    id: uuidv4(),
+    name: "e-commerce app",
+    stack: {
+      "source code": <SiGithub />,
+      rtl: <SiTestinglibrary />,
+      jest: <SiJest />,
+      "mern stack": <RiNodejsLine />,
+    },
+  },
+  {
+    id: uuidv4(),
+    name: "e-commerce app",
+    stack: {
+      "source code": <SiGithub />,
+      rtl: <SiTestinglibrary />,
+      jest: <SiJest />,
+      "mern stack": <RiNodejsLine />,
+    },
+  },
+  {
+    id: uuidv4(),
+    name: "e-commerce app",
+    stack: {
+      "source code": <SiGithub />,
+      rtl: <SiTestinglibrary />,
+      jest: <SiJest />,
+      "mern stack": <RiNodejsLine />,
+    },
+  },
+  {
+    id: uuidv4(),
+    name: "e-commerce app",
+    stack: {
+      "source code": <SiGithub />,
+      rtl: <SiTestinglibrary />,
+      jest: "??",
+      "mern stack": <RiNodejsLine />,
+    },
+  },
+];
+
+export const navlinks = [
+  {
+    id: uuidv4(),
+    text: "home",
+    icon: <FaHome />,
+  },
+  {
+    id: uuidv4(),
+    text: "about",
+    icon: <IoIosContact />,
+  },
+  {
+    id: uuidv4(),
+    text: "skills",
+    icon: <FaTools />,
+  },
+  {
+    id: uuidv4(),
+    text: "projects",
+    icon: <IoRocket />,
+  },
+  {
+    id: uuidv4(),
+    text: "contact",
+    icon: <MdEmail />,
+  },
+];
+
+export const navLinksTexts = [
+  { id: uuidv4(), text: "home" },
+  { id: uuidv4(), text: "about" },
+  { id: uuidv4(), text: "skills" },
+  { id: uuidv4(), text: "projects" },
+  { id: uuidv4(), text: "contact" },
 ];
