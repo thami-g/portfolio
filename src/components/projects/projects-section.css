@@ -1,17 +1,8 @@
 .projects {
   background-color: #2a2a2a;
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 1.5em 2em;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 4rem;
-  max-width: 900px;
-  /* border: 1px solid red; */
-}
+
 
 @media (min-width: 800px) {
   .container {
